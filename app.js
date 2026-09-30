@@ -7,6 +7,7 @@
 const state = {
   theme: localStorage.getItem('tb_theme') || 'light',
   lang: localStorage.getItem('tb_lang') || 'en',
+  user: JSON.parse(localStorage.getItem('wanderway_user')) || null,
   activeTab: 'trips',
   trips: [],
   buddies: [],
@@ -1278,6 +1279,9 @@ function handleVoiceCommand(cmd) {
   } else if (cmd.includes('booking')) {
     switchTab('bookings');
     speakResponse('Opening your bookings');
+  } else if (cmd.includes('login') || cmd.includes('sign in') || cmd.includes('register') || cmd.includes('account')) {
+    switchTab('login');
+    speakResponse('Opening login page');
   } else if (cmd.includes('dark')) {
     applyTheme('dark');
     speakResponse('Dark mode enabled');
@@ -1309,6 +1313,387 @@ function showVoiceToast(msg) {
 }
 
 // ===================================================================
+// AUTHENTICATION & LOGIN CONTROLLER
+// ===================================================================
+function isValidEmail(email) {
+  // Regex strictly validating standard email format user@domain.tld
+  const re = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)+$/;
+  return re.test(String(email).trim());
+}
+
+function handleEmailInputValidation(input) {
+  const errEl = document.getElementById(`${input.id}-err`);
+  const val = input.value.trim();
+  if (!val) {
+    input.classList.remove('is-invalid');
+    if (errEl) errEl.classList.remove('active');
+    return false;
+  }
+  if (!isValidEmail(val)) {
+    input.classList.add('is-invalid');
+    if (errEl) errEl.classList.add('active');
+    return false;
+  } else {
+    input.classList.remove('is-invalid');
+    if (errEl) errEl.classList.remove('active');
+    return true;
+  }
+}
+
+function handlePasswordInputValidation(input) {
+  const errEl = document.getElementById(`${input.id}-err`);
+  const val = input.value;
+  if (!val) {
+    input.classList.remove('is-invalid');
+    if (errEl) errEl.classList.remove('active');
+    return false;
+  }
+  if (val.length < 6) {
+    input.classList.add('is-invalid');
+    if (errEl) errEl.classList.add('active');
+    return false;
+  } else {
+    input.classList.remove('is-invalid');
+    if (errEl) errEl.classList.remove('active');
+    return true;
+  }
+}
+
+function togglePasswordVisibility(inputId, btn) {
+  const input = document.getElementById(inputId);
+  if (!input) return;
+  if (input.type === 'password') {
+    input.type = 'text';
+    btn.textContent = '🙈';
+    btn.setAttribute('title', 'Hide Password');
+  } else {
+    input.type = 'password';
+    btn.textContent = '👁️';
+    btn.setAttribute('title', 'Show Password');
+  }
+}
+
+function switchAuthMode(mode) {
+  const signinForm = document.getElementById('form-signin');
+  const signupForm = document.getElementById('form-signup');
+  const tabSignin = document.getElementById('tab-btn-signin');
+  const tabSignup = document.getElementById('tab-btn-signup');
+  const errBox = document.getElementById('auth-error-box');
+  if (errBox) errBox.classList.remove('active');
+
+  if (mode === 'signin') {
+    signinForm.style.display = 'block';
+    signupForm.style.display = 'none';
+    tabSignin.classList.add('active');
+    tabSignup.classList.remove('active');
+  } else {
+    signinForm.style.display = 'none';
+    signupForm.style.display = 'block';
+    tabSignin.classList.remove('active');
+    tabSignup.classList.add('active');
+  }
+}
+
+function handleLoginSubmit(e) {
+  e.preventDefault();
+  const emailInput = document.getElementById('login-email');
+  const passwordInput = document.getElementById('login-password');
+  const errBox = document.getElementById('auth-error-box');
+  const errMsg = document.getElementById('auth-error-msg');
+
+  const email = emailInput.value.trim();
+  const password = passwordInput.value;
+
+  // Strict email format check
+  if (!isValidEmail(email)) {
+    emailInput.classList.add('is-invalid');
+    document.getElementById('login-email-err').classList.add('active');
+    if (errBox && errMsg) {
+      errMsg.textContent = 'Please enter a valid email format (e.g. traveler@wanderway.com)';
+      errBox.classList.add('active');
+    }
+    emailInput.focus();
+    return;
+  }
+
+  // Password check
+  if (!password || password.length < 6) {
+    passwordInput.classList.add('is-invalid');
+    document.getElementById('login-password-err').classList.add('active');
+    if (errBox && errMsg) {
+      errMsg.textContent = 'Password must be at least 6 characters long';
+      errBox.classList.add('active');
+    }
+    passwordInput.focus();
+    return;
+  }
+
+  if (errBox) errBox.classList.remove('active');
+
+  // Successful Login
+  const namePart = email.split('@')[0];
+  const displayName = namePart.charAt(0).toUpperCase() + namePart.slice(1);
+
+  const user = {
+    email: email,
+    name: displayName,
+    avatar: 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=150&q=80',
+    loggedInAt: new Date().toISOString()
+  };
+
+  state.user = user;
+  localStorage.setItem('wanderway_user', JSON.stringify(user));
+  updateAuthUI();
+  showVoiceToast(`🎉 Welcome to WanderWay, ${displayName}!`);
+  switchTab('trips');
+}
+
+function handleRegisterSubmit(e) {
+  e.preventDefault();
+  const nameInput = document.getElementById('reg-name');
+  const emailInput = document.getElementById('reg-email');
+  const passwordInput = document.getElementById('reg-password');
+  const locInput = document.getElementById('reg-location');
+  const errBox = document.getElementById('auth-error-box');
+  const errMsg = document.getElementById('auth-error-msg');
+
+  const name = nameInput.value.trim();
+  const email = emailInput.value.trim();
+  const password = passwordInput.value;
+  const location = locInput ? locInput.value.trim() : 'Global Explorer';
+
+  if (!isValidEmail(email)) {
+    emailInput.classList.add('is-invalid');
+    document.getElementById('reg-email-err').classList.add('active');
+    if (errBox && errMsg) {
+      errMsg.textContent = 'Please provide a valid email format';
+      errBox.classList.add('active');
+    }
+    emailInput.focus();
+    return;
+  }
+
+  if (!password || password.length < 6) {
+    passwordInput.classList.add('is-invalid');
+    document.getElementById('reg-password-err').classList.add('active');
+    if (errBox && errMsg) {
+      errMsg.textContent = 'Password must be at least 6 characters long';
+      errBox.classList.add('active');
+    }
+    passwordInput.focus();
+    return;
+  }
+
+  const user = {
+    email: email,
+    name: name || 'Adventurer',
+    location: location,
+    avatar: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=150&q=80',
+    loggedInAt: new Date().toISOString()
+  };
+
+  state.user = user;
+  localStorage.setItem('wanderway_user', JSON.stringify(user));
+  updateAuthUI();
+  showVoiceToast(`🌟 Account created! Welcome, ${user.name}!`);
+  switchTab('trips');
+}
+
+function handleLogout() {
+  state.user = null;
+  localStorage.removeItem('wanderway_user');
+  updateAuthUI();
+  showVoiceToast('🚪 Locked site. Please sign in to enter WanderWay.');
+}
+
+function updateAuthUI() {
+  const doorEl = document.getElementById('auth-portal-door');
+  const appWrapper = document.getElementById('app-protected-wrapper');
+  const displayName = document.getElementById('user-display-name');
+  const avatarImg = document.getElementById('user-avatar-img');
+
+  if (state.user) {
+    // User is logged in -> Hide the door, display the protected app
+    if (doorEl) doorEl.style.display = 'none';
+    if (appWrapper) {
+      appWrapper.style.display = 'flex';
+      appWrapper.classList.add('authenticated');
+    }
+    if (displayName) displayName.textContent = state.user.name;
+    if (avatarImg && state.user.avatar) avatarImg.src = state.user.avatar;
+  } else {
+    // User is NOT logged in -> Door is the only entrance
+    if (doorEl) doorEl.style.display = 'flex';
+    if (appWrapper) {
+      appWrapper.style.display = 'none';
+      appWrapper.classList.remove('authenticated');
+    }
+  }
+}
+
+function switchDoorAuthMode(mode) {
+  const signinForm = document.getElementById('door-form-signin');
+  const signupForm = document.getElementById('door-form-signup');
+  const tabSignin = document.getElementById('door-tab-signin');
+  const tabSignup = document.getElementById('door-tab-signup');
+  const errBox = document.getElementById('door-auth-error-box');
+  if (errBox) errBox.classList.remove('active');
+
+  if (mode === 'signin') {
+    signinForm.style.display = 'block';
+    signupForm.style.display = 'none';
+    tabSignin.classList.add('active');
+    tabSignup.classList.remove('active');
+  } else {
+    signinForm.style.display = 'none';
+    signupForm.style.display = 'block';
+    tabSignin.classList.remove('active');
+    tabSignup.classList.add('active');
+  }
+}
+
+function handleDoorLogin(e) {
+  e.preventDefault();
+  const emailInput = document.getElementById('door-login-email');
+  const passwordInput = document.getElementById('door-login-password');
+  const errBox = document.getElementById('door-auth-error-box');
+  const errMsg = document.getElementById('door-auth-error-msg');
+
+  const email = emailInput.value.trim();
+  const password = passwordInput.value;
+
+  // Strict email format verification
+  if (!isValidEmail(email)) {
+    emailInput.classList.add('is-invalid');
+    document.getElementById('door-login-email-err').classList.add('active');
+    if (errBox && errMsg) {
+      errMsg.textContent = 'Please enter a valid email format (e.g. explorer@wanderway.com)';
+      errBox.classList.add('active');
+    }
+    emailInput.focus();
+    return;
+  }
+
+  // Password verification
+  if (!password || password.length < 6) {
+    passwordInput.classList.add('is-invalid');
+    document.getElementById('door-login-password-err').classList.add('active');
+    if (errBox && errMsg) {
+      errMsg.textContent = 'Password must be at least 6 characters long';
+      errBox.classList.add('active');
+    }
+    passwordInput.focus();
+    return;
+  }
+
+  if (errBox) errBox.classList.remove('active');
+
+  // Successful Login -> Open door!
+  const namePart = email.split('@')[0];
+  const displayName = namePart.charAt(0).toUpperCase() + namePart.slice(1);
+
+  const user = {
+    email: email,
+    name: displayName,
+    avatar: 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=150&q=80',
+    loggedInAt: new Date().toISOString()
+  };
+
+  state.user = user;
+  localStorage.setItem('wanderway_user', JSON.stringify(user));
+  updateAuthUI();
+  showVoiceToast(`🚪 Door unlocked! Welcome to WanderWay, ${displayName}!`);
+  switchTab('trips');
+}
+
+function handleDoorRegister(e) {
+  e.preventDefault();
+  const nameInput = document.getElementById('door-reg-name');
+  const emailInput = document.getElementById('door-reg-email');
+  const passwordInput = document.getElementById('door-reg-password');
+  const locInput = document.getElementById('door-reg-location');
+  const errBox = document.getElementById('door-auth-error-box');
+  const errMsg = document.getElementById('door-auth-error-msg');
+
+  const name = nameInput.value.trim();
+  const email = emailInput.value.trim();
+  const password = passwordInput.value;
+  const location = locInput ? locInput.value.trim() : 'Global Explorer';
+
+  if (!isValidEmail(email)) {
+    emailInput.classList.add('is-invalid');
+    document.getElementById('door-reg-email-err').classList.add('active');
+    if (errBox && errMsg) {
+      errMsg.textContent = 'Please enter a valid email format';
+      errBox.classList.add('active');
+    }
+    emailInput.focus();
+    return;
+  }
+
+  if (!password || password.length < 6) {
+    passwordInput.classList.add('is-invalid');
+    document.getElementById('door-reg-password-err').classList.add('active');
+    if (errBox && errMsg) {
+      errMsg.textContent = 'Password must be at least 6 characters long';
+      errBox.classList.add('active');
+    }
+    passwordInput.focus();
+    return;
+  }
+
+  const user = {
+    email: email,
+    name: name || 'Adventurer',
+    location: location,
+    avatar: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=150&q=80',
+    loggedInAt: new Date().toISOString()
+  };
+
+  state.user = user;
+  localStorage.setItem('wanderway_user', JSON.stringify(user));
+  updateAuthUI();
+  showVoiceToast(`🌟 Door unlocked! Welcome to WanderWay, ${user.name}!`);
+  switchTab('trips');
+}
+
+function fillDemoCredentials() {
+  const emailInput = document.getElementById('door-login-email');
+  const passwordInput = document.getElementById('door-login-password');
+  if (emailInput && passwordInput) {
+    emailInput.value = 'explorer@wanderway.com';
+    passwordInput.value = 'wander123';
+    handleDoorLogin(new Event('submit'));
+  }
+}
+
+function simulateSocialLogin(provider) {
+  const user = {
+    email: `traveler.${provider.toLowerCase()}@wanderway.com`,
+    name: `${provider} Traveler`,
+    avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80',
+    loggedInAt: new Date().toISOString()
+  };
+
+  state.user = user;
+  localStorage.setItem('wanderway_user', JSON.stringify(user));
+  updateAuthUI();
+  showVoiceToast(`🚪 Door unlocked via ${provider}!`);
+  switchTab('trips');
+}
+
+function handleForgotPassword() {
+  const email = prompt('Enter your registered email address for password reset:');
+  if (email) {
+    if (isValidEmail(email)) {
+      alert(`Password reset instructions sent to ${email}`);
+    } else {
+      alert('Please provide a valid email format.');
+    }
+  }
+}
+
+// ===================================================================
 // APP INITIALIZATION
 // ===================================================================
 document.addEventListener('DOMContentLoaded', () => {
@@ -1316,6 +1701,7 @@ document.addEventListener('DOMContentLoaded', () => {
   applyTheme(state.theme);
   setLanguage(state.lang);
   setupNavigation();
+  updateAuthUI();
   renderTrips();
   renderBuddies();
   renderExpenses();

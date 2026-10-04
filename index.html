@@ -1,13 +1,18 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>WanderWay - Connect, Explore & Travel Together</title>
-  <meta name="description" content="A lightweight, high-performance solo travel companion platform. Find verified travel partners, join group itineraries, split expenses, and travel safely worldwide." />
+  <meta name="description"
+    content="A lightweight, high-performance solo travel companion platform. Find verified travel partners, join group itineraries, split expenses, and travel safely worldwide." />
   <link rel="stylesheet" href="styles.css" />
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✈️</text></svg>" />
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✈️</text></svg>" />
+  <meta name="google-site-verification" content="rUlFmj3gTVtMHzcP7cWwFME7btCIgdVTHQrrUAuDcpA" />
 </head>
+
 <body>
 
   <!-- ===================================================================
@@ -25,8 +30,11 @@
     <header class="auth-door-nav">
       <div class="logo-wrap">
         <div class="logo-icon">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M17.8 19.2L16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"></path>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path
+              d="M17.8 19.2L16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z">
+            </path>
           </svg>
         </div>
         <span>Wander<span class="highlight">Way</span></span>
@@ -49,12 +57,14 @@
         <!-- Hero Benefit Side -->
         <div class="login-hero-side">
           <div class="login-hero-content">
-            <div class="hero-badge" style="background: rgba(255,255,255,0.2); color: #fff; border-color: rgba(255,255,255,0.3);">
+            <div class="hero-badge"
+              style="background: rgba(255,255,255,0.2); color: #fff; border-color: rgba(255,255,255,0.3);">
               🚪 Portal to WanderWay
             </div>
             <h2>Unlock Your Next Adventure</h2>
-            <p>Log in with your credentials to enter the WanderWay community, join live itineraries, and connect with verified travelers worldwide.</p>
-            
+            <p>Log in with your credentials to enter the WanderWay community, join live itineraries, and connect with
+              verified travelers worldwide.</p>
+
             <ul class="login-benefits">
               <li>
                 <div class="benefit-icon">✓</div>
@@ -85,7 +95,8 @@
         <div class="login-form-side">
           <!-- Auth Tabs -->
           <div class="auth-tabs">
-            <button type="button" class="auth-tab-btn active" id="door-tab-signin" onclick="switchDoorAuthMode('signin')">
+            <button type="button" class="auth-tab-btn active" id="door-tab-signin"
+              onclick="switchDoorAuthMode('signin')">
               Sign In
             </button>
             <button type="button" class="auth-tab-btn" id="door-tab-signup" onclick="switchDoorAuthMode('signup')">
@@ -110,16 +121,9 @@
               <label for="door-login-email">Email Address <span style="color: var(--danger);">*</span></label>
               <div class="input-with-icon">
                 <span class="input-icon">✉️</span>
-                <input 
-                  type="email" 
-                  id="door-login-email" 
-                  name="email" 
-                  class="form-control" 
-                  placeholder="name@example.com" 
-                  required 
-                  autocomplete="email"
-                  oninput="handleEmailInputValidation(this)"
-                />
+                <input type="email" id="door-login-email" name="email" class="form-control"
+                  placeholder="name@example.com" required autocomplete="email"
+                  oninput="handleEmailInputValidation(this)" />
               </div>
               <div class="field-validation-msg" id="door-login-email-err">
                 Please enter a valid email address (e.g., name@domain.com)
@@ -130,17 +134,11 @@
               <label for="door-login-password">Password <span style="color: var(--danger);">*</span></label>
               <div class="input-with-icon">
                 <span class="input-icon">🔒</span>
-                <input 
-                  type="password" 
-                  id="door-login-password" 
-                  name="password" 
-                  class="form-control" 
-                  placeholder="Enter your password" 
-                  required 
-                  autocomplete="current-password"
-                  oninput="handlePasswordInputValidation(this)"
-                />
-                <button type="button" class="password-toggle-btn" onclick="togglePasswordVisibility('door-login-password', this)" title="Show/Hide Password">
+                <input type="password" id="door-login-password" name="password" class="form-control"
+                  placeholder="Enter your password" required autocomplete="current-password"
+                  oninput="handlePasswordInputValidation(this)" />
+                <button type="button" class="password-toggle-btn"
+                  onclick="togglePasswordVisibility('door-login-password', this)" title="Show/Hide Password">
                   👁️
                 </button>
               </div>
@@ -176,11 +174,23 @@
               <div class="social-auth-divider">Or enter with</div>
               <div class="social-btns-row">
                 <button type="button" class="btn-social" onclick="simulateSocialLogin('Google')">
-                  <svg width="18" height="18" viewBox="0 0 24 24"><path fill="#EA4335" d="M12 5c1.6 0 3 .6 4.1 1.7l3.1-3.1C17.3 1.8 14.8 1 12 1 7.5 1 3.7 3.6 1.9 7.3l3.7 2.9C6.5 7.4 9 5 12 5z"/><path fill="#4285F4" d="M23.5 12.3c0-.8-.1-1.6-.2-2.3H12v4.6h6.5c-.3 1.5-1.1 2.8-2.4 3.7l3.7 2.9c2.2-2 3.7-5 3.7-8.9z"/><path fill="#FBBC05" d="M5.6 14.8c-.2-.7-.4-1.5-.4-2.8s.2-2.1.4-2.8L1.9 6.3C.7 8.7 0 10.8 0 12s.7 3.3 1.9 5.7l3.7-2.9z"/><path fill="#34A853" d="M12 23c3.2 0 6-1.1 8-3l-3.7-2.9c-1.1.7-2.5 1.2-4.3 1.2-3 0-5.5-2-6.4-4.8L1.9 16.4C3.7 20.4 7.5 23 12 23z"/></svg>
+                  <svg width="18" height="18" viewBox="0 0 24 24">
+                    <path fill="#EA4335"
+                      d="M12 5c1.6 0 3 .6 4.1 1.7l3.1-3.1C17.3 1.8 14.8 1 12 1 7.5 1 3.7 3.6 1.9 7.3l3.7 2.9C6.5 7.4 9 5 12 5z" />
+                    <path fill="#4285F4"
+                      d="M23.5 12.3c0-.8-.1-1.6-.2-2.3H12v4.6h6.5c-.3 1.5-1.1 2.8-2.4 3.7l3.7 2.9c2.2-2 3.7-5 3.7-8.9z" />
+                    <path fill="#FBBC05"
+                      d="M5.6 14.8c-.2-.7-.4-1.5-.4-2.8s.2-2.1.4-2.8L1.9 6.3C.7 8.7 0 10.8 0 12s.7 3.3 1.9 5.7l3.7-2.9z" />
+                    <path fill="#34A853"
+                      d="M12 23c3.2 0 6-1.1 8-3l-3.7-2.9c-1.1.7-2.5 1.2-4.3 1.2-3 0-5.5-2-6.4-4.8L1.9 16.4C3.7 20.4 7.5 23 12 23z" />
+                  </svg>
                   <span>Google</span>
                 </button>
                 <button type="button" class="btn-social" onclick="simulateSocialLogin('Apple')">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 6.84c.64-.78 1.08-1.87.96-2.96-.93.04-2.06.62-2.73 1.4-.59.68-1.11 1.78-.97 2.85 1.05.08 2.11-.51 2.74-1.29z"/></svg>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                      d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 6.84c.64-.78 1.08-1.87.96-2.96-.93.04-2.06.62-2.73 1.4-.59.68-1.11 1.78-.97 2.85 1.05.08 2.11-.51 2.74-1.29z" />
+                  </svg>
                   <span>Apple</span>
                 </button>
               </div>
@@ -198,7 +208,8 @@
               <label for="door-reg-name">Full Name <span style="color: var(--danger);">*</span></label>
               <div class="input-with-icon">
                 <span class="input-icon">👤</span>
-                <input type="text" id="door-reg-name" name="fullName" class="form-control" placeholder="e.g. Alex Morgan" required />
+                <input type="text" id="door-reg-name" name="fullName" class="form-control"
+                  placeholder="e.g. Alex Morgan" required />
               </div>
             </div>
 
@@ -206,15 +217,8 @@
               <label for="door-reg-email">Email Address <span style="color: var(--danger);">*</span></label>
               <div class="input-with-icon">
                 <span class="input-icon">✉️</span>
-                <input 
-                  type="email" 
-                  id="door-reg-email" 
-                  name="email" 
-                  class="form-control" 
-                  placeholder="name@example.com" 
-                  required 
-                  oninput="handleEmailInputValidation(this)"
-                />
+                <input type="email" id="door-reg-email" name="email" class="form-control" placeholder="name@example.com"
+                  required oninput="handleEmailInputValidation(this)" />
               </div>
               <div class="field-validation-msg" id="door-reg-email-err">
                 Please enter a valid email address (e.g., name@domain.com)
@@ -222,20 +226,15 @@
             </div>
 
             <div class="form-group">
-              <label for="door-reg-password">Password (min 6 characters) <span style="color: var(--danger);">*</span></label>
+              <label for="door-reg-password">Password (min 6 characters) <span
+                  style="color: var(--danger);">*</span></label>
               <div class="input-with-icon">
                 <span class="input-icon">🔒</span>
-                <input 
-                  type="password" 
-                  id="door-reg-password" 
-                  name="password" 
-                  class="form-control" 
-                  placeholder="Create a strong password" 
-                  required 
-                  minlength="6"
-                  oninput="handlePasswordInputValidation(this)"
-                />
-                <button type="button" class="password-toggle-btn" onclick="togglePasswordVisibility('door-reg-password', this)" title="Show/Hide Password">
+                <input type="password" id="door-reg-password" name="password" class="form-control"
+                  placeholder="Create a strong password" required minlength="6"
+                  oninput="handlePasswordInputValidation(this)" />
+                <button type="button" class="password-toggle-btn"
+                  onclick="togglePasswordVisibility('door-reg-password', this)" title="Show/Hide Password">
                   👁️
                 </button>
               </div>
@@ -248,7 +247,8 @@
               <label for="door-reg-location">Home City / Country</label>
               <div class="input-with-icon">
                 <span class="input-icon">📍</span>
-                <input type="text" id="door-reg-location" name="location" class="form-control" placeholder="e.g. Mumbai, India or New York, USA" />
+                <input type="text" id="door-reg-location" name="location" class="form-control"
+                  placeholder="e.g. Mumbai, India or New York, USA" />
               </div>
             </div>
 
@@ -267,943 +267,971 @@
   <div id="app-protected-wrapper">
     <!-- STICKY NAVBAR -->
     <nav class="navbar">
-    <div class="container">
-      <a href="#trips" class="logo-wrap">
-        <div class="logo-icon">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M17.8 19.2L16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"></path>
-          </svg>
-        </div>
-        <span>Wander<span class="highlight">Way</span></span>
-      </a>
-
-      <ul class="nav-links" id="nav-links">
-        <li><button class="nav-link active" data-target="trips" data-i18n="navTrips">Explore Trips</button></li>
-        <li><button class="nav-link" data-target="meetup" data-i18n="navMeetup">Find Buddies</button></li>
-        <li><button class="nav-link" data-target="expenses" data-i18n="navExpenses">Expense Tracker</button></li>
-        <li><button class="nav-link" data-target="safety" data-i18n="navSafety">Safety & SOS</button></li>
-        <li><button class="nav-link" data-target="contest" data-i18n="navContest">Photo Contest</button></li>
-        <li><button class="nav-link" data-target="map" data-i18n="navMap">Destinations</button></li>
-        <li><button class="nav-link" data-target="bookings" data-i18n="navBookings">My Bookings</button></li>
-      </ul>
-
-      <div class="nav-actions">
-        <!-- Language Switcher -->
-        <select class="lang-select" id="lang-select" onchange="setLanguage(this.value)" title="Choose Language">
-          <option value="en">English (EN)</option>
-          <option value="hi">हिन्दी (HI)</option>
-          <option value="es">Español (ES)</option>
-          <option value="fr">Français (FR)</option>
-        </select>
-
-        <!-- Voice Navigation Mic -->
-        <button class="icon-btn" id="voice-nav-btn" title="Voice Navigation (Click & Speak)">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path>
-            <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
-            <line x1="12" y1="19" x2="12" y2="23"></line>
-            <line x1="8" y1="23" x2="16" y2="23"></line>
-          </svg>
-        </button>
-
-        <!-- Theme Toggle -->
-        <button class="icon-btn" id="theme-toggle-btn" onclick="toggleTheme()" title="Toggle Dark/Light Mode">
-          🌙
-        </button>
-
-        <!-- User Logged-In Badge / Lock Out Button -->
-        <div id="nav-auth-wrap" style="display: flex; align-items: center; gap: 0.6rem;">
-          <div class="user-nav-badge" id="nav-user-badge">
-            <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=80&q=80" alt="User" class="user-nav-avatar" id="user-avatar-img" />
-            <span class="user-nav-name" id="user-display-name">Alex</span>
+      <div class="container">
+        <a href="#trips" class="logo-wrap">
+          <div class="logo-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path
+                d="M17.8 19.2L16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z">
+              </path>
+            </svg>
           </div>
-          <button class="btn btn-outline btn-sm" onclick="handleLogout()" title="Log out and lock site">
-            🚪 Lock & Log Out
+          <span>Wander<span class="highlight">Way</span></span>
+        </a>
+
+        <ul class="nav-links" id="nav-links">
+          <li><button class="nav-link active" data-target="trips" data-i18n="navTrips">Explore Trips</button></li>
+          <li><button class="nav-link" data-target="meetup" data-i18n="navMeetup">Find Buddies</button></li>
+          <li><button class="nav-link" data-target="expenses" data-i18n="navExpenses">Expense Tracker</button></li>
+          <li><button class="nav-link" data-target="safety" data-i18n="navSafety">Safety & SOS</button></li>
+          <li><button class="nav-link" data-target="contest" data-i18n="navContest">Photo Contest</button></li>
+          <li><button class="nav-link" data-target="map" data-i18n="navMap">Destinations</button></li>
+          <li><button class="nav-link" data-target="bookings" data-i18n="navBookings">My Bookings</button></li>
+        </ul>
+
+        <div class="nav-actions">
+          <!-- Language Switcher -->
+          <select class="lang-select" id="lang-select" onchange="setLanguage(this.value)" title="Choose Language">
+            <option value="en">English (EN)</option>
+            <option value="hi">हिन्दी (HI)</option>
+            <option value="es">Español (ES)</option>
+            <option value="fr">Français (FR)</option>
+          </select>
+
+          <!-- Voice Navigation Mic -->
+          <button class="icon-btn" id="voice-nav-btn" title="Voice Navigation (Click & Speak)">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path>
+              <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
+              <line x1="12" y1="19" x2="12" y2="23"></line>
+              <line x1="8" y1="23" x2="16" y2="23"></line>
+            </svg>
+          </button>
+
+          <!-- Theme Toggle -->
+          <button class="icon-btn" id="theme-toggle-btn" onclick="toggleTheme()" title="Toggle Dark/Light Mode">
+            🌙
+          </button>
+
+          <!-- User Logged-In Badge / Lock Out Button -->
+          <div id="nav-auth-wrap" style="display: flex; align-items: center; gap: 0.6rem;">
+            <div class="user-nav-badge" id="nav-user-badge">
+              <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=80&q=80"
+                alt="User" class="user-nav-avatar" id="user-avatar-img" />
+              <span class="user-nav-name" id="user-display-name">Alex</span>
+            </div>
+            <button class="btn btn-outline btn-sm" onclick="handleLogout()" title="Log out and lock site">
+              🚪 Lock & Log Out
+            </button>
+          </div>
+
+          <!-- Lead a Trip CTA -->
+          <button class="btn btn-primary btn-sm" onclick="openNewTripModal()">
+            + <span data-i18n="hostBtn">Lead a Trip</span>
+          </button>
+
+          <!-- Mobile Menu Toggle -->
+          <button class="mobile-menu-btn" id="mobile-menu-btn" title="Toggle Navigation">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ===================================================================
+       HERO BANNER
+       =================================================================== -->
+    <header class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <div>
+            <div class="hero-badge" data-i18n="heroTag">
+              ✈️ The #1 Solo Travel Companion Platform
+            </div>
+            <h1 class="hero-title">
+              <span data-i18n="heroTitle">Find Your Next Travel Partner & Explore Together</span>
+            </h1>
+            <p class="hero-desc" data-i18n="heroDesc">
+              Connect with verified solo adventurers, share itineraries, split trip expenses, and travel the globe
+              safely without going solo.
+            </p>
+            <div class="hero-actions">
+              <button class="btn btn-primary btn-lg" onclick="switchTab('trips')">
+                🎒 <span data-i18n="joinBtn">Explore Trips</span>
+              </button>
+              <button class="btn btn-outline btn-lg" onclick="openNewTripModal()">
+                🚩 <span data-i18n="hostBtn">Lead a Trip</span>
+              </button>
+            </div>
+            <div class="hero-stats">
+              <div class="stat-item">
+                <h4>12,400+</h4>
+                <p data-i18n="statTravelers">Solo Adventurers</p>
+              </div>
+              <div class="stat-item">
+                <h4>480+</h4>
+                <p data-i18n="statTrips">Trips Organized</p>
+              </div>
+              <div class="stat-item">
+                <h4>99.2%</h4>
+                <p data-i18n="statSafety">Safety Score</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hero Visual Collage -->
+          <div class="hero-visual">
+            <div class="hero-main-card">
+              <div class="hero-float-badge">
+                <div class="avatar-stack">
+                  <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=80&q=80"
+                    alt="Traveler" />
+                  <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=80&q=80"
+                    alt="Traveler" />
+                  <img src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?auto=format&fit=crop&w=80&q=80"
+                    alt="Traveler" />
+                </div>
+                <span style="font-size: 0.82rem; font-weight: 700;">+4 joined Spiti</span>
+              </div>
+
+              <img src="https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?auto=format&fit=crop&w=600&q=80"
+                alt="Spiti Valley Expedition" class="hero-main-img" />
+              <h4 style="font-size: 1.15rem; margin-bottom: 0.25rem;">Himalayan Heights Trek</h4>
+              <div
+                style="font-size: 0.85rem; color: var(--text-muted); display: flex; justify-content: space-between; align-items: center;">
+                <span>📍 Himachal, India</span>
+                <strong style="color: var(--primary);">₹18,500</strong>
+              </div>
+
+              <div class="hero-float-pill">
+                <span>● Verified Trip</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- ===================================================================
+       QUICK SEARCH & FILTER BAR
+       =================================================================== -->
+    <div class="container search-bar-wrap">
+      <div class="search-bar">
+        <div class="search-field">
+          <label for="search-dest-input">
+            <span>📍</span> <span data-i18n="searchDestLabel">Destination</span>
+          </label>
+          <input type="text" id="search-dest-input" placeholder="e.g. Manali, Bali, Kyoto..." />
+        </div>
+
+        <div class="search-field">
+          <label for="search-style-select">
+            <span>🏷️</span> <span data-i18n="searchStyleLabel">Trip Style</span>
+          </label>
+          <select id="search-style-select">
+            <option value="all">All Styles</option>
+            <option value="Mountains">Mountains</option>
+            <option value="Beaches">Beaches</option>
+            <option value="Heritage">Heritage</option>
+            <option value="International">International</option>
+          </select>
+        </div>
+
+        <div class="search-field">
+          <label for="search-date-select">
+            <span>📅</span> <span data-i18n="searchDatesLabel">Departure Month</span>
+          </label>
+          <select id="search-date-select">
+            <option value="all">Any Month</option>
+            <option value="oct">October 2026</option>
+            <option value="nov">November 2026</option>
+            <option value="dec">December 2026</option>
+            <option value="jan">January 2027</option>
+          </select>
+        </div>
+
+        <div class="search-field">
+          <label for="search-budget-select">
+            <span>💰</span> <span data-i18n="searchBudgetLabel">Max Budget</span>
+          </label>
+          <select id="search-budget-select">
+            <option value="999999">Any Budget</option>
+            <option value="20000">Under ₹20,000</option>
+            <option value="40000">Under ₹40,000</option>
+            <option value="80000">Under ₹80,000</option>
+          </select>
+        </div>
+
+        <button class="btn btn-primary" onclick="filterTrips()">
+          🔍 Search
+        </button>
+      </div>
+    </div>
+
+    <!-- ===================================================================
+       MAIN VIEWS CONTAINER
+       =================================================================== -->
+    <main class="container">
+
+      <!-- VIEW 1: EXPLORE TRIPS -->
+      <section class="section app-section" id="sec-trips">
+        <div class="section-header">
+          <div>
+            <span class="section-tag">Featured Adventures</span>
+            <h2 class="section-title" data-i18n="tripsHeading">Featured Group Itineraries</h2>
+            <p class="section-desc" data-i18n="tripsSub">
+              Join planned adventures led by enthusiastic travelers from around the world
+            </p>
+          </div>
+          <button class="btn btn-secondary" onclick="openNewTripModal()">
+            + Post Your Itinerary
           </button>
         </div>
 
-        <!-- Lead a Trip CTA -->
-        <button class="btn btn-primary btn-sm" onclick="openNewTripModal()">
-          + <span data-i18n="hostBtn">Lead a Trip</span>
-        </button>
+        <!-- Filter Pills -->
+        <div class="filter-bar" id="trip-filters">
+          <button class="filter-btn active" onclick="filterByPill('all', this)">All Trips</button>
+          <button class="filter-btn" onclick="filterByPill('Mountains', this)">🏔️ Mountains</button>
+          <button class="filter-btn" onclick="filterByPill('Beaches', this)">🏖️ Coastal & Beaches</button>
+          <button class="filter-btn" onclick="filterByPill('Heritage', this)">🏛️ Heritage & Culture</button>
+          <button class="filter-btn" onclick="filterByPill('International', this)">✈️ International</button>
+        </div>
 
-        <!-- Mobile Menu Toggle -->
-        <button class="mobile-menu-btn" id="mobile-menu-btn" title="Toggle Navigation">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <line x1="3" y1="12" x2="21" y2="12"></line>
-            <line x1="3" y1="6" x2="21" y2="6"></line>
-            <line x1="3" y1="18" x2="21" y2="18"></line>
-          </svg>
-        </button>
-      </div>
-    </div>
-  </nav>
+        <!-- Trips Grid -->
+        <div class="trips-grid" id="trips-grid"></div>
+      </section>
 
-  <!-- ===================================================================
-       HERO BANNER
-       =================================================================== -->
-  <header class="hero">
-    <div class="container">
-      <div class="hero-content">
-        <div>
-          <div class="hero-badge" data-i18n="heroTag">
-            ✈️ The #1 Solo Travel Companion Platform
-          </div>
-          <h1 class="hero-title">
-            <span data-i18n="heroTitle">Find Your Next Travel Partner & Explore Together</span>
-          </h1>
-          <p class="hero-desc" data-i18n="heroDesc">
-            Connect with verified solo adventurers, share itineraries, split trip expenses, and travel the globe safely without going solo.
-          </p>
-          <div class="hero-actions">
-            <button class="btn btn-primary btn-lg" onclick="switchTab('trips')">
-              🎒 <span data-i18n="joinBtn">Explore Trips</span>
-            </button>
-            <button class="btn btn-outline btn-lg" onclick="openNewTripModal()">
-              🚩 <span data-i18n="hostBtn">Lead a Trip</span>
-            </button>
-          </div>
-          <div class="hero-stats">
-            <div class="stat-item">
-              <h4>12,400+</h4>
-              <p data-i18n="statTravelers">Solo Adventurers</p>
-            </div>
-            <div class="stat-item">
-              <h4>480+</h4>
-              <p data-i18n="statTrips">Trips Organized</p>
-            </div>
-            <div class="stat-item">
-              <h4>99.2%</h4>
-              <p data-i18n="statSafety">Safety Score</p>
-            </div>
+      <!-- VIEW 2: MEETUP / FIND BUDDIES -->
+      <section class="section app-section" id="sec-meetup" style="display: none;">
+        <div class="section-header">
+          <div>
+            <span class="section-tag">Solo Travelers</span>
+            <h2 class="section-title" data-i18n="buddiesHeading">Meet Verified Solo Travelers</h2>
+            <p class="section-desc" data-i18n="buddiesSub">
+              Discover like-minded adventurers with similar hobbies, interests, and bucket lists
+            </p>
           </div>
         </div>
 
-        <!-- Hero Visual Collage -->
-        <div class="hero-visual">
-          <div class="hero-main-card">
-            <div class="hero-float-badge">
-              <div class="avatar-stack">
-                <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=80&q=80" alt="Traveler" />
-                <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=80&q=80" alt="Traveler" />
-                <img src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?auto=format&fit=crop&w=80&q=80" alt="Traveler" />
+        <div class="buddies-grid" id="buddies-grid"></div>
+      </section>
+
+      <!-- VIEW 3: EXPENSE TRACKER & SPLITTER -->
+      <section class="section app-section" id="sec-expenses" style="display: none;">
+        <div class="section-header">
+          <div>
+            <span class="section-tag">Budget & Finance</span>
+            <h2 class="section-title" data-i18n="expenseHeading">Trip Expense Tracker & Splitter</h2>
+            <p class="section-desc" data-i18n="expenseSub">
+              Manage your travel budget in real-time, log expenses, and split bills effortlessly
+            </p>
+          </div>
+        </div>
+
+        <div class="expense-app-box">
+          <!-- Top Stats Row -->
+          <div class="expense-stats-row">
+            <div class="expense-stat-card highlight">
+              <p>TOTAL TRIP EXPENDITURE</p>
+              <h3 id="exp-total-val">₹0</h3>
+            </div>
+            <div class="expense-stat-card">
+              <p>SPLIT PER PERSON</p>
+              <h3 id="exp-split-val" style="color: var(--primary);">₹0</h3>
+            </div>
+            <div class="expense-stat-card">
+              <p>MEMBERS IN GROUP</p>
+              <div style="display: flex; align-items: center; gap: 0.5rem; margin-top: 0.2rem;">
+                <input type="number" id="split-members-input" value="4" min="1" max="50"
+                  style="width: 70px; padding: 0.35rem 0.5rem; font-size: 1.2rem; font-weight: 800; border-radius: 6px; border: 1px solid var(--card-border);" />
+                <span style="font-size: 0.85rem; color: var(--text-muted);">travelers</span>
               </div>
-              <span style="font-size: 0.82rem; font-weight: 700;">+4 joined Spiti</span>
             </div>
-
-            <img src="https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?auto=format&fit=crop&w=600&q=80" alt="Spiti Valley Expedition" class="hero-main-img" />
-            <h4 style="font-size: 1.15rem; margin-bottom: 0.25rem;">Himalayan Heights Trek</h4>
-            <div style="font-size: 0.85rem; color: var(--text-muted); display: flex; justify-content: space-between; align-items: center;">
-              <span>📍 Himachal, India</span>
-              <strong style="color: var(--primary);">₹18,500</strong>
-            </div>
-
-            <div class="hero-float-pill">
-              <span>● Verified Trip</span>
+            <div class="expense-stat-card">
+              <p>HIGHEST SPENDING CATEGORY</p>
+              <h3 id="exp-top-cat" style="color: var(--secondary);">Stay</h3>
             </div>
           </div>
-        </div>
-      </div>
-    </div>
-  </header>
 
-  <!-- ===================================================================
-       QUICK SEARCH & FILTER BAR
-       =================================================================== -->
-  <div class="container search-bar-wrap">
-    <div class="search-bar">
-      <div class="search-field">
-        <label for="search-dest-input">
-          <span>📍</span> <span data-i18n="searchDestLabel">Destination</span>
-        </label>
-        <input type="text" id="search-dest-input" placeholder="e.g. Manali, Bali, Kyoto..." />
-      </div>
+          <!-- Add Expense + List Grid -->
+          <div class="expense-grid">
+            <div class="expense-form-wrap">
+              <h4 style="font-size: 1.15rem; margin-bottom: 1.25rem;">+ Add Trip Expense</h4>
+              <form onsubmit="handleAddExpense(event)">
+                <div class="form-group">
+                  <label>Expense Name / Place</label>
+                  <input type="text" name="title" class="form-control"
+                    placeholder="e.g. Mountain Homestay, River Rafting" required />
+                </div>
+                <div class="form-group">
+                  <label>Category</label>
+                  <select name="category" class="form-control">
+                    <option value="Stay">Stay / Accommodation</option>
+                    <option value="Travel">Travel & Fuel</option>
+                    <option value="Food">Food & Dining</option>
+                    <option value="Activities">Activities & Passes</option>
+                    <option value="Misc">Miscellaneous</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label>Amount (₹)</label>
+                  <input type="number" name="amount" class="form-control" placeholder="e.g. 4500" required />
+                </div>
+                <div class="form-group">
+                  <label>Paid By</label>
+                  <input type="text" name="paidBy" class="form-control" placeholder="e.g. You, Rohan, Hardik"
+                    required />
+                </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%;">
+                  Add to Expense List
+                </button>
+              </form>
+            </div>
 
-      <div class="search-field">
-        <label for="search-style-select">
-          <span>🏷️</span> <span data-i18n="searchStyleLabel">Trip Style</span>
-        </label>
-        <select id="search-style-select">
-          <option value="all">All Styles</option>
-          <option value="Mountains">Mountains</option>
-          <option value="Beaches">Beaches</option>
-          <option value="Heritage">Heritage</option>
-          <option value="International">International</option>
-        </select>
-      </div>
+            <div>
+              <h4 style="font-size: 1.15rem; margin-bottom: 1rem;">Logged Expenses</h4>
+              <div class="expense-list" id="expense-list"></div>
 
-      <div class="search-field">
-        <label for="search-date-select">
-          <span>📅</span> <span data-i18n="searchDatesLabel">Departure Month</span>
-        </label>
-        <select id="search-date-select">
-          <option value="all">Any Month</option>
-          <option value="oct">October 2026</option>
-          <option value="nov">November 2026</option>
-          <option value="dec">December 2026</option>
-          <option value="jan">January 2027</option>
-        </select>
-      </div>
-
-      <div class="search-field">
-        <label for="search-budget-select">
-          <span>💰</span> <span data-i18n="searchBudgetLabel">Max Budget</span>
-        </label>
-        <select id="search-budget-select">
-          <option value="999999">Any Budget</option>
-          <option value="20000">Under ₹20,000</option>
-          <option value="40000">Under ₹40,000</option>
-          <option value="80000">Under ₹80,000</option>
-        </select>
-      </div>
-
-      <button class="btn btn-primary" onclick="filterTrips()">
-        🔍 Search
-      </button>
-    </div>
-  </div>
-
-  <!-- ===================================================================
-       MAIN VIEWS CONTAINER
-       =================================================================== -->
-  <main class="container">
-
-    <!-- VIEW 1: EXPLORE TRIPS -->
-    <section class="section app-section" id="sec-trips">
-      <div class="section-header">
-        <div>
-          <span class="section-tag">Featured Adventures</span>
-          <h2 class="section-title" data-i18n="tripsHeading">Featured Group Itineraries</h2>
-          <p class="section-desc" data-i18n="tripsSub">
-            Join planned adventures led by enthusiastic travelers from around the world
-          </p>
-        </div>
-        <button class="btn btn-secondary" onclick="openNewTripModal()">
-          + Post Your Itinerary
-        </button>
-      </div>
-
-      <!-- Filter Pills -->
-      <div class="filter-bar" id="trip-filters">
-        <button class="filter-btn active" onclick="filterByPill('all', this)">All Trips</button>
-        <button class="filter-btn" onclick="filterByPill('Mountains', this)">🏔️ Mountains</button>
-        <button class="filter-btn" onclick="filterByPill('Beaches', this)">🏖️ Coastal & Beaches</button>
-        <button class="filter-btn" onclick="filterByPill('Heritage', this)">🏛️ Heritage & Culture</button>
-        <button class="filter-btn" onclick="filterByPill('International', this)">✈️ International</button>
-      </div>
-
-      <!-- Trips Grid -->
-      <div class="trips-grid" id="trips-grid"></div>
-    </section>
-
-    <!-- VIEW 2: MEETUP / FIND BUDDIES -->
-    <section class="section app-section" id="sec-meetup" style="display: none;">
-      <div class="section-header">
-        <div>
-          <span class="section-tag">Solo Travelers</span>
-          <h2 class="section-title" data-i18n="buddiesHeading">Meet Verified Solo Travelers</h2>
-          <p class="section-desc" data-i18n="buddiesSub">
-            Discover like-minded adventurers with similar hobbies, interests, and bucket lists
-          </p>
-        </div>
-      </div>
-
-      <div class="buddies-grid" id="buddies-grid"></div>
-    </section>
-
-    <!-- VIEW 3: EXPENSE TRACKER & SPLITTER -->
-    <section class="section app-section" id="sec-expenses" style="display: none;">
-      <div class="section-header">
-        <div>
-          <span class="section-tag">Budget & Finance</span>
-          <h2 class="section-title" data-i18n="expenseHeading">Trip Expense Tracker & Splitter</h2>
-          <p class="section-desc" data-i18n="expenseSub">
-            Manage your travel budget in real-time, log expenses, and split bills effortlessly
-          </p>
-        </div>
-      </div>
-
-      <div class="expense-app-box">
-        <!-- Top Stats Row -->
-        <div class="expense-stats-row">
-          <div class="expense-stat-card highlight">
-            <p>TOTAL TRIP EXPENDITURE</p>
-            <h3 id="exp-total-val">₹0</h3>
-          </div>
-          <div class="expense-stat-card">
-            <p>SPLIT PER PERSON</p>
-            <h3 id="exp-split-val" style="color: var(--primary);">₹0</h3>
-          </div>
-          <div class="expense-stat-card">
-            <p>MEMBERS IN GROUP</p>
-            <div style="display: flex; align-items: center; gap: 0.5rem; margin-top: 0.2rem;">
-              <input type="number" id="split-members-input" value="4" min="1" max="50" style="width: 70px; padding: 0.35rem 0.5rem; font-size: 1.2rem; font-weight: 800; border-radius: 6px; border: 1px solid var(--card-border);" />
-              <span style="font-size: 0.85rem; color: var(--text-muted);">travelers</span>
+              <!-- Category Breakdown Progress -->
+              <div class="cat-breakdown">
+                <h5 style="margin-bottom: 0.85rem;">Spending by Category</h5>
+                <div id="cat-progress-bars"></div>
+              </div>
             </div>
           </div>
-          <div class="expense-stat-card">
-            <p>HIGHEST SPENDING CATEGORY</p>
-            <h3 id="exp-top-cat" style="color: var(--secondary);">Stay</h3>
+        </div>
+      </section>
+
+      <!-- VIEW 4: SAFETY & SOS -->
+      <section class="section app-section" id="sec-safety" style="display: none;">
+        <div class="safety-banner">
+          <div>
+            <h2>🚨 Safety & Emergency Protocol</h2>
+            <p>
+              Your safety is our top priority. Trigger the SOS emergency broadcaster to send your live coordinates to
+              local emergency contacts and verified tourist helplines.
+            </p>
+          </div>
+          <button class="sos-btn" onclick="triggerSOS()">
+            <span>🆘</span> TRIGGER SOS ALERT
+          </button>
+        </div>
+
+        <div class="section-header">
+          <div>
+            <span class="section-tag">Emergency Contacts</span>
+            <h2 class="section-title">24/7 Verified Helplines</h2>
+            <p class="section-desc">Direct access to police, ambulance, and traveler support</p>
           </div>
         </div>
 
-        <!-- Add Expense + List Grid -->
-        <div class="expense-grid">
-          <div class="expense-form-wrap">
-            <h4 style="font-size: 1.15rem; margin-bottom: 1.25rem;">+ Add Trip Expense</h4>
-            <form onsubmit="handleAddExpense(event)">
+        <div class="helpline-grid">
+          <div class="helpline-card">
+            <div class="helpline-icon">👮</div>
+            <div class="helpline-info">
+              <h4>Police Emergency</h4>
+              <a href="tel:112" class="helpline-number">112 / 100</a>
+            </div>
+          </div>
+          <div class="helpline-card">
+            <div class="helpline-icon">🚑</div>
+            <div class="helpline-info">
+              <h4>Medical Ambulance</h4>
+              <a href="tel:108" class="helpline-number">108 / 102</a>
+            </div>
+          </div>
+          <div class="helpline-card">
+            <div class="helpline-icon">🌍</div>
+            <div class="helpline-info">
+              <h4>Tourist Helpline</h4>
+              <a href="tel:1363" class="helpline-number">1363 (Toll-Free)</a>
+            </div>
+          </div>
+          <div class="helpline-card">
+            <div class="helpline-icon">👩</div>
+            <div class="helpline-info">
+              <h4>Women Helpline</h4>
+              <a href="tel:1091" class="helpline-number">1091</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="section-header">
+          <div>
+            <span class="section-tag">Best Practices</span>
+            <h2 class="section-title">Solo Traveler Safety Protocols</h2>
+          </div>
+        </div>
+
+        <div class="safety-tips-grid">
+          <div class="tip-card">
+            <h4>📍 Live Location Check-ins</h4>
+            <p>Always share your real-time WhatsApp or Google Maps location with a family member or buddy before
+              starting remote treks.</p>
+          </div>
+          <div class="tip-card">
+            <h4>📑 Document Redundancy</h4>
+            <p>Keep offline digital backups of your Passport, Government IDs, and Travel Insurance policy on your phone
+              and Google Drive.</p>
+          </div>
+          <div class="tip-card">
+            <h4>💵 Split Emergency Cash</h4>
+            <p>Never store all money in one wallet. Stash backup currency and cards in your main backpack liner or
+              jacket inner pocket.</p>
+          </div>
+          <div class="tip-card">
+            <h4>🏨 Verified Accommodations</h4>
+            <p>Choose hostels and homestays with verified reviews, 24/7 front desks, and strong female traveler security
+              ratings.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- VIEW 5: PHOTO CONTEST & COMMUNITY -->
+      <section class="section app-section" id="sec-contest" style="display: none;">
+        <div class="section-header">
+          <div>
+            <span class="section-tag">Weekly Photo Showcase</span>
+            <h2 class="section-title" data-i18n="contestHeading">Community Stories & Photo Contest</h2>
+            <p class="section-desc" data-i18n="contestSub">
+              Vote for weekly travel moments and showcase your stunning wanderlust captures
+            </p>
+          </div>
+          <button class="btn btn-primary" onclick="openSubmitPhotoModal()">
+            📸 Submit Your Photo
+          </button>
+        </div>
+
+        <div class="contest-grid" id="contest-grid"></div>
+      </section>
+
+      <!-- VIEW 6: INTERACTIVE MAP EXPLORER -->
+      <section class="section app-section" id="sec-map" style="display: none;">
+        <div class="section-header">
+          <div>
+            <span class="section-tag">Global Explorer</span>
+            <h2 class="section-title" data-i18n="mapHeading">Interactive Hotspot Explorer</h2>
+            <p class="section-desc" data-i18n="mapSub">
+              Tap on global pins to view weather forecasts, buddy groups, and insider guides
+            </p>
+          </div>
+        </div>
+
+        <div class="map-container">
+          <!-- Map Canvas / Visual Area -->
+          <div class="interactive-map-area">
+            <!-- Stylized World Map SVG Vector -->
+            <svg class="map-svg-mock" viewBox="0 0 1000 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M150,120 Q180,80 260,110 T320,190 T240,280 T160,200 Z" fill="#334155" opacity="0.6" />
+              <path d="M280,310 Q320,290 360,340 T320,440 T260,390 Z" fill="#334155" opacity="0.6" />
+              <path d="M480,90 Q540,60 620,100 T680,180 T560,220 T460,140 Z" fill="#334155" opacity="0.6" />
+              <path d="M480,240 Q550,210 590,290 T540,410 T460,330 Z" fill="#334155" opacity="0.6" />
+              <path d="M680,100 Q780,70 890,120 T920,240 T780,260 T690,160 Z" fill="#334155" opacity="0.6" />
+              <path d="M800,340 Q880,320 890,410 T810,430 Z" fill="#334155" opacity="0.6" />
+            </svg>
+
+            <!-- Dynamic Pins Container -->
+            <div id="map-pins-wrap"></div>
+          </div>
+
+          <!-- Selected Destination Card -->
+          <div class="map-details-card" id="map-destination-card"></div>
+        </div>
+      </section>
+
+      <!-- VIEW 7: MY BOOKINGS -->
+      <section class="section app-section" id="sec-bookings" style="display: none;">
+        <div class="section-header">
+          <div>
+            <span class="section-tag">Itinerary Passes</span>
+            <h2 class="section-title">My Confirmed Bookings</h2>
+            <p class="section-desc">View and print your official Travel Buddy group travel passes</p>
+          </div>
+        </div>
+
+        <div class="bookings-list" id="bookings-list"></div>
+      </section>
+
+      <!-- VIEW 8: LOGIN & AUTHENTICATION -->
+      <section class="section app-section" id="sec-login" style="display: none;">
+        <div class="login-container">
+          <!-- Hero Benefit Side -->
+          <div class="login-hero-side">
+            <div class="login-hero-content">
+              <div class="hero-badge"
+                style="background: rgba(255,255,255,0.2); color: #fff; border-color: rgba(255,255,255,0.3);">
+                🌍 Wander Together
+              </div>
+              <h2>Your Passport to Meaningful Adventures</h2>
+              <p>Join thousands of solo wanderers, plan dream trips, split expenses, and explore authentic places
+                safely.</p>
+
+              <ul class="login-benefits">
+                <li>
+                  <div class="benefit-icon">✓</div>
+                  <span>Connect with 100% verified solo travelers</span>
+                </li>
+                <li>
+                  <div class="benefit-icon">✓</div>
+                  <span>Split group itinerary costs transparently</span>
+                </li>
+                <li>
+                  <div class="benefit-icon">✓</div>
+                  <span>24/7 SOS safety alerts & emergency support</span>
+                </li>
+                <li>
+                  <div class="benefit-icon">✓</div>
+                  <span>WanderBot AI custom trip recommendations</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="login-quote">
+              "I found 3 awesome travel buddies for my Spiti valley trip within two days on WanderWay. Unforgettable
+              memories!"
+              <div style="font-weight: 700; margin-top: 0.35rem; font-style: normal;">— Priya S., Mumbai</div>
+            </div>
+          </div>
+
+          <!-- Form Side -->
+          <div class="login-form-side">
+            <!-- Auth Tabs -->
+            <div class="auth-tabs">
+              <button type="button" class="auth-tab-btn active" id="tab-btn-signin" onclick="switchAuthMode('signin')">
+                Sign In
+              </button>
+              <button type="button" class="auth-tab-btn" id="tab-btn-signup" onclick="switchAuthMode('signup')">
+                Create Account
+              </button>
+            </div>
+
+            <!-- Alert Error Box -->
+            <div class="auth-error-box" id="auth-error-box">
+              <span>⚠️</span>
+              <span id="auth-error-msg">Please enter a valid email and password</span>
+            </div>
+
+            <!-- SIGN IN FORM -->
+            <form id="form-signin" onsubmit="handleLoginSubmit(event)" novalidate>
+              <div class="auth-header">
+                <h3>Welcome Back</h3>
+                <p>Enter your email and password to access your trips</p>
+              </div>
+
               <div class="form-group">
-                <label>Expense Name / Place</label>
-                <input type="text" name="title" class="form-control" placeholder="e.g. Mountain Homestay, River Rafting" required />
+                <label for="login-email">Email Address <span style="color: var(--danger);">*</span></label>
+                <div class="input-with-icon">
+                  <span class="input-icon">✉️</span>
+                  <input type="email" id="login-email" name="email" class="form-control" placeholder="name@example.com"
+                    required autocomplete="email" oninput="handleEmailInputValidation(this)" />
+                </div>
+                <div class="field-validation-msg" id="login-email-err">
+                  Please enter a valid email address (e.g., name@domain.com)
+                </div>
               </div>
+
               <div class="form-group">
-                <label>Category</label>
-                <select name="category" class="form-control">
-                  <option value="Stay">Stay / Accommodation</option>
-                  <option value="Travel">Travel & Fuel</option>
-                  <option value="Food">Food & Dining</option>
-                  <option value="Activities">Activities & Passes</option>
-                  <option value="Misc">Miscellaneous</option>
-                </select>
+                <label for="login-password">Password <span style="color: var(--danger);">*</span></label>
+                <div class="input-with-icon">
+                  <span class="input-icon">🔒</span>
+                  <input type="password" id="login-password" name="password" class="form-control"
+                    placeholder="Enter your password" required autocomplete="current-password"
+                    oninput="handlePasswordInputValidation(this)" />
+                  <button type="button" class="password-toggle-btn"
+                    onclick="togglePasswordVisibility('login-password', this)" title="Show/Hide Password">
+                    👁️
+                  </button>
+                </div>
+                <div class="field-validation-msg" id="login-password-err">
+                  Password must be at least 6 characters long
+                </div>
               </div>
+
+              <div class="auth-row-remember">
+                <label class="remember-check">
+                  <input type="checkbox" id="login-remember" checked />
+                  <span>Remember me</span>
+                </label>
+                <a href="javascript:void(0)" class="forgot-link" onclick="handleForgotPassword()">Forgot password?</a>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;">
+                Sign In to WanderWay
+              </button>
+
+              <!-- Social Logins -->
+              <div class="social-auth-wrap">
+                <div class="social-auth-divider">Or continue with</div>
+                <div class="social-btns-row">
+                  <button type="button" class="btn-social" onclick="simulateSocialLogin('Google')">
+                    <svg width="18" height="18" viewBox="0 0 24 24">
+                      <path fill="#EA4335"
+                        d="M12 5c1.6 0 3 .6 4.1 1.7l3.1-3.1C17.3 1.8 14.8 1 12 1 7.5 1 3.7 3.6 1.9 7.3l3.7 2.9C6.5 7.4 9 5 12 5z" />
+                      <path fill="#4285F4"
+                        d="M23.5 12.3c0-.8-.1-1.6-.2-2.3H12v4.6h6.5c-.3 1.5-1.1 2.8-2.4 3.7l3.7 2.9c2.2-2 3.7-5 3.7-8.9z" />
+                      <path fill="#FBBC05"
+                        d="M5.6 14.8c-.2-.7-.4-1.5-.4-2.8s.2-2.1.4-2.8L1.9 6.3C.7 8.7 0 10.8 0 12s.7 3.3 1.9 5.7l3.7-2.9z" />
+                      <path fill="#34A853"
+                        d="M12 23c3.2 0 6-1.1 8-3l-3.7-2.9c-1.1.7-2.5 1.2-4.3 1.2-3 0-5.5-2-6.4-4.8L1.9 16.4C3.7 20.4 7.5 23 12 23z" />
+                    </svg>
+                    <span>Google</span>
+                  </button>
+                  <button type="button" class="btn-social" onclick="simulateSocialLogin('Apple')">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                      <path
+                        d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 6.84c.64-.78 1.08-1.87.96-2.96-.93.04-2.06.62-2.73 1.4-.59.68-1.11 1.78-.97 2.85 1.05.08 2.11-.51 2.74-1.29z" />
+                    </svg>
+                    <span>Apple</span>
+                  </button>
+                </div>
+              </div>
+            </form>
+
+            <!-- SIGN UP FORM (HIDDEN BY DEFAULT) -->
+            <form id="form-signup" onsubmit="handleRegisterSubmit(event)" style="display: none;" novalidate>
+              <div class="auth-header">
+                <h3>Create Your WanderWay Account</h3>
+                <p>Start connecting with travel buddies around the world</p>
+              </div>
+
               <div class="form-group">
-                <label>Amount (₹)</label>
-                <input type="number" name="amount" class="form-control" placeholder="e.g. 4500" required />
+                <label for="reg-name">Full Name <span style="color: var(--danger);">*</span></label>
+                <div class="input-with-icon">
+                  <span class="input-icon">👤</span>
+                  <input type="text" id="reg-name" name="fullName" class="form-control" placeholder="e.g. Alex Morgan"
+                    required />
+                </div>
               </div>
+
               <div class="form-group">
-                <label>Paid By</label>
-                <input type="text" name="paidBy" class="form-control" placeholder="e.g. You, Rohan, Hardik" required />
+                <label for="reg-email">Email Address <span style="color: var(--danger);">*</span></label>
+                <div class="input-with-icon">
+                  <span class="input-icon">✉️</span>
+                  <input type="email" id="reg-email" name="email" class="form-control" placeholder="name@example.com"
+                    required oninput="handleEmailInputValidation(this)" />
+                </div>
+                <div class="field-validation-msg" id="reg-email-err">
+                  Please enter a valid email address (e.g., name@domain.com)
+                </div>
               </div>
-              <button type="submit" class="btn btn-primary" style="width: 100%;">
-                Add to Expense List
+
+              <div class="form-group">
+                <label for="reg-password">Password (min 6 characters) <span
+                    style="color: var(--danger);">*</span></label>
+                <div class="input-with-icon">
+                  <span class="input-icon">🔒</span>
+                  <input type="password" id="reg-password" name="password" class="form-control"
+                    placeholder="Create a strong password" required minlength="6"
+                    oninput="handlePasswordInputValidation(this)" />
+                  <button type="button" class="password-toggle-btn"
+                    onclick="togglePasswordVisibility('reg-password', this)" title="Show/Hide Password">
+                    👁️
+                  </button>
+                </div>
+                <div class="field-validation-msg" id="reg-password-err">
+                  Password must be at least 6 characters long
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="reg-location">Home City / Country</label>
+                <div class="input-with-icon">
+                  <span class="input-icon">📍</span>
+                  <input type="text" id="reg-location" name="location" class="form-control"
+                    placeholder="e.g. Mumbai, India or New York, USA" />
+                </div>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;">
+                Create Account
               </button>
             </form>
           </div>
-
-          <div>
-            <h4 style="font-size: 1.15rem; margin-bottom: 1rem;">Logged Expenses</h4>
-            <div class="expense-list" id="expense-list"></div>
-
-            <!-- Category Breakdown Progress -->
-            <div class="cat-breakdown">
-              <h5 style="margin-bottom: 0.85rem;">Spending by Category</h5>
-              <div id="cat-progress-bars"></div>
-            </div>
-          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- VIEW 4: SAFETY & SOS -->
-    <section class="section app-section" id="sec-safety" style="display: none;">
-      <div class="safety-banner">
-        <div>
-          <h2>🚨 Safety & Emergency Protocol</h2>
-          <p>
-            Your safety is our top priority. Trigger the SOS emergency broadcaster to send your live coordinates to local emergency contacts and verified tourist helplines.
-          </p>
-        </div>
-        <button class="sos-btn" onclick="triggerSOS()">
-          <span>🆘</span> TRIGGER SOS ALERT
-        </button>
-      </div>
+    </main>
 
-      <div class="section-header">
-        <div>
-          <span class="section-tag">Emergency Contacts</span>
-          <h2 class="section-title">24/7 Verified Helplines</h2>
-          <p class="section-desc">Direct access to police, ambulance, and traveler support</p>
-        </div>
-      </div>
-
-      <div class="helpline-grid">
-        <div class="helpline-card">
-          <div class="helpline-icon">👮</div>
-          <div class="helpline-info">
-            <h4>Police Emergency</h4>
-            <a href="tel:112" class="helpline-number">112 / 100</a>
-          </div>
-        </div>
-        <div class="helpline-card">
-          <div class="helpline-icon">🚑</div>
-          <div class="helpline-info">
-            <h4>Medical Ambulance</h4>
-            <a href="tel:108" class="helpline-number">108 / 102</a>
-          </div>
-        </div>
-        <div class="helpline-card">
-          <div class="helpline-icon">🌍</div>
-          <div class="helpline-info">
-            <h4>Tourist Helpline</h4>
-            <a href="tel:1363" class="helpline-number">1363 (Toll-Free)</a>
-          </div>
-        </div>
-        <div class="helpline-card">
-          <div class="helpline-icon">👩</div>
-          <div class="helpline-info">
-            <h4>Women Helpline</h4>
-            <a href="tel:1091" class="helpline-number">1091</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="section-header">
-        <div>
-          <span class="section-tag">Best Practices</span>
-          <h2 class="section-title">Solo Traveler Safety Protocols</h2>
-        </div>
-      </div>
-
-      <div class="safety-tips-grid">
-        <div class="tip-card">
-          <h4>📍 Live Location Check-ins</h4>
-          <p>Always share your real-time WhatsApp or Google Maps location with a family member or buddy before starting remote treks.</p>
-        </div>
-        <div class="tip-card">
-          <h4>📑 Document Redundancy</h4>
-          <p>Keep offline digital backups of your Passport, Government IDs, and Travel Insurance policy on your phone and Google Drive.</p>
-        </div>
-        <div class="tip-card">
-          <h4>💵 Split Emergency Cash</h4>
-          <p>Never store all money in one wallet. Stash backup currency and cards in your main backpack liner or jacket inner pocket.</p>
-        </div>
-        <div class="tip-card">
-          <h4>🏨 Verified Accommodations</h4>
-          <p>Choose hostels and homestays with verified reviews, 24/7 front desks, and strong female traveler security ratings.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- VIEW 5: PHOTO CONTEST & COMMUNITY -->
-    <section class="section app-section" id="sec-contest" style="display: none;">
-      <div class="section-header">
-        <div>
-          <span class="section-tag">Weekly Photo Showcase</span>
-          <h2 class="section-title" data-i18n="contestHeading">Community Stories & Photo Contest</h2>
-          <p class="section-desc" data-i18n="contestSub">
-            Vote for weekly travel moments and showcase your stunning wanderlust captures
-          </p>
-        </div>
-        <button class="btn btn-primary" onclick="openSubmitPhotoModal()">
-          📸 Submit Your Photo
-        </button>
-      </div>
-
-      <div class="contest-grid" id="contest-grid"></div>
-    </section>
-
-    <!-- VIEW 6: INTERACTIVE MAP EXPLORER -->
-    <section class="section app-section" id="sec-map" style="display: none;">
-      <div class="section-header">
-        <div>
-          <span class="section-tag">Global Explorer</span>
-          <h2 class="section-title" data-i18n="mapHeading">Interactive Hotspot Explorer</h2>
-          <p class="section-desc" data-i18n="mapSub">
-            Tap on global pins to view weather forecasts, buddy groups, and insider guides
-          </p>
-        </div>
-      </div>
-
-      <div class="map-container">
-        <!-- Map Canvas / Visual Area -->
-        <div class="interactive-map-area">
-          <!-- Stylized World Map SVG Vector -->
-          <svg class="map-svg-mock" viewBox="0 0 1000 500" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M150,120 Q180,80 260,110 T320,190 T240,280 T160,200 Z" fill="#334155" opacity="0.6"/>
-            <path d="M280,310 Q320,290 360,340 T320,440 T260,390 Z" fill="#334155" opacity="0.6"/>
-            <path d="M480,90 Q540,60 620,100 T680,180 T560,220 T460,140 Z" fill="#334155" opacity="0.6"/>
-            <path d="M480,240 Q550,210 590,290 T540,410 T460,330 Z" fill="#334155" opacity="0.6"/>
-            <path d="M680,100 Q780,70 890,120 T920,240 T780,260 T690,160 Z" fill="#334155" opacity="0.6"/>
-            <path d="M800,340 Q880,320 890,410 T810,430 Z" fill="#334155" opacity="0.6"/>
-          </svg>
-
-          <!-- Dynamic Pins Container -->
-          <div id="map-pins-wrap"></div>
-        </div>
-
-        <!-- Selected Destination Card -->
-        <div class="map-details-card" id="map-destination-card"></div>
-      </div>
-    </section>
-
-    <!-- VIEW 7: MY BOOKINGS -->
-    <section class="section app-section" id="sec-bookings" style="display: none;">
-      <div class="section-header">
-        <div>
-          <span class="section-tag">Itinerary Passes</span>
-          <h2 class="section-title">My Confirmed Bookings</h2>
-          <p class="section-desc">View and print your official Travel Buddy group travel passes</p>
-        </div>
-      </div>
-
-      <div class="bookings-list" id="bookings-list"></div>
-    </section>
-
-    <!-- VIEW 8: LOGIN & AUTHENTICATION -->
-    <section class="section app-section" id="sec-login" style="display: none;">
-      <div class="login-container">
-        <!-- Hero Benefit Side -->
-        <div class="login-hero-side">
-          <div class="login-hero-content">
-            <div class="hero-badge" style="background: rgba(255,255,255,0.2); color: #fff; border-color: rgba(255,255,255,0.3);">
-              🌍 Wander Together
-            </div>
-            <h2>Your Passport to Meaningful Adventures</h2>
-            <p>Join thousands of solo wanderers, plan dream trips, split expenses, and explore authentic places safely.</p>
-            
-            <ul class="login-benefits">
-              <li>
-                <div class="benefit-icon">✓</div>
-                <span>Connect with 100% verified solo travelers</span>
-              </li>
-              <li>
-                <div class="benefit-icon">✓</div>
-                <span>Split group itinerary costs transparently</span>
-              </li>
-              <li>
-                <div class="benefit-icon">✓</div>
-                <span>24/7 SOS safety alerts & emergency support</span>
-              </li>
-              <li>
-                <div class="benefit-icon">✓</div>
-                <span>WanderBot AI custom trip recommendations</span>
-              </li>
-            </ul>
-          </div>
-
-          <div class="login-quote">
-            "I found 3 awesome travel buddies for my Spiti valley trip within two days on WanderWay. Unforgettable memories!"
-            <div style="font-weight: 700; margin-top: 0.35rem; font-style: normal;">— Priya S., Mumbai</div>
-          </div>
-        </div>
-
-        <!-- Form Side -->
-        <div class="login-form-side">
-          <!-- Auth Tabs -->
-          <div class="auth-tabs">
-            <button type="button" class="auth-tab-btn active" id="tab-btn-signin" onclick="switchAuthMode('signin')">
-              Sign In
-            </button>
-            <button type="button" class="auth-tab-btn" id="tab-btn-signup" onclick="switchAuthMode('signup')">
-              Create Account
-            </button>
-          </div>
-
-          <!-- Alert Error Box -->
-          <div class="auth-error-box" id="auth-error-box">
-            <span>⚠️</span>
-            <span id="auth-error-msg">Please enter a valid email and password</span>
-          </div>
-
-          <!-- SIGN IN FORM -->
-          <form id="form-signin" onsubmit="handleLoginSubmit(event)" novalidate>
-            <div class="auth-header">
-              <h3>Welcome Back</h3>
-              <p>Enter your email and password to access your trips</p>
-            </div>
-
-            <div class="form-group">
-              <label for="login-email">Email Address <span style="color: var(--danger);">*</span></label>
-              <div class="input-with-icon">
-                <span class="input-icon">✉️</span>
-                <input 
-                  type="email" 
-                  id="login-email" 
-                  name="email" 
-                  class="form-control" 
-                  placeholder="name@example.com" 
-                  required 
-                  autocomplete="email"
-                  oninput="handleEmailInputValidation(this)"
-                />
-              </div>
-              <div class="field-validation-msg" id="login-email-err">
-                Please enter a valid email address (e.g., name@domain.com)
-              </div>
-            </div>
-
-            <div class="form-group">
-              <label for="login-password">Password <span style="color: var(--danger);">*</span></label>
-              <div class="input-with-icon">
-                <span class="input-icon">🔒</span>
-                <input 
-                  type="password" 
-                  id="login-password" 
-                  name="password" 
-                  class="form-control" 
-                  placeholder="Enter your password" 
-                  required 
-                  autocomplete="current-password"
-                  oninput="handlePasswordInputValidation(this)"
-                />
-                <button type="button" class="password-toggle-btn" onclick="togglePasswordVisibility('login-password', this)" title="Show/Hide Password">
-                  👁️
-                </button>
-              </div>
-              <div class="field-validation-msg" id="login-password-err">
-                Password must be at least 6 characters long
-              </div>
-            </div>
-
-            <div class="auth-row-remember">
-              <label class="remember-check">
-                <input type="checkbox" id="login-remember" checked />
-                <span>Remember me</span>
-              </label>
-              <a href="javascript:void(0)" class="forgot-link" onclick="handleForgotPassword()">Forgot password?</a>
-            </div>
-
-            <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;">
-              Sign In to WanderWay
-            </button>
-
-            <!-- Social Logins -->
-            <div class="social-auth-wrap">
-              <div class="social-auth-divider">Or continue with</div>
-              <div class="social-btns-row">
-                <button type="button" class="btn-social" onclick="simulateSocialLogin('Google')">
-                  <svg width="18" height="18" viewBox="0 0 24 24"><path fill="#EA4335" d="M12 5c1.6 0 3 .6 4.1 1.7l3.1-3.1C17.3 1.8 14.8 1 12 1 7.5 1 3.7 3.6 1.9 7.3l3.7 2.9C6.5 7.4 9 5 12 5z"/><path fill="#4285F4" d="M23.5 12.3c0-.8-.1-1.6-.2-2.3H12v4.6h6.5c-.3 1.5-1.1 2.8-2.4 3.7l3.7 2.9c2.2-2 3.7-5 3.7-8.9z"/><path fill="#FBBC05" d="M5.6 14.8c-.2-.7-.4-1.5-.4-2.8s.2-2.1.4-2.8L1.9 6.3C.7 8.7 0 10.8 0 12s.7 3.3 1.9 5.7l3.7-2.9z"/><path fill="#34A853" d="M12 23c3.2 0 6-1.1 8-3l-3.7-2.9c-1.1.7-2.5 1.2-4.3 1.2-3 0-5.5-2-6.4-4.8L1.9 16.4C3.7 20.4 7.5 23 12 23z"/></svg>
-                  <span>Google</span>
-                </button>
-                <button type="button" class="btn-social" onclick="simulateSocialLogin('Apple')">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 6.84c.64-.78 1.08-1.87.96-2.96-.93.04-2.06.62-2.73 1.4-.59.68-1.11 1.78-.97 2.85 1.05.08 2.11-.51 2.74-1.29z"/></svg>
-                  <span>Apple</span>
-                </button>
-              </div>
-            </div>
-          </form>
-
-          <!-- SIGN UP FORM (HIDDEN BY DEFAULT) -->
-          <form id="form-signup" onsubmit="handleRegisterSubmit(event)" style="display: none;" novalidate>
-            <div class="auth-header">
-              <h3>Create Your WanderWay Account</h3>
-              <p>Start connecting with travel buddies around the world</p>
-            </div>
-
-            <div class="form-group">
-              <label for="reg-name">Full Name <span style="color: var(--danger);">*</span></label>
-              <div class="input-with-icon">
-                <span class="input-icon">👤</span>
-                <input type="text" id="reg-name" name="fullName" class="form-control" placeholder="e.g. Alex Morgan" required />
-              </div>
-            </div>
-
-            <div class="form-group">
-              <label for="reg-email">Email Address <span style="color: var(--danger);">*</span></label>
-              <div class="input-with-icon">
-                <span class="input-icon">✉️</span>
-                <input 
-                  type="email" 
-                  id="reg-email" 
-                  name="email" 
-                  class="form-control" 
-                  placeholder="name@example.com" 
-                  required 
-                  oninput="handleEmailInputValidation(this)"
-                />
-              </div>
-              <div class="field-validation-msg" id="reg-email-err">
-                Please enter a valid email address (e.g., name@domain.com)
-              </div>
-            </div>
-
-            <div class="form-group">
-              <label for="reg-password">Password (min 6 characters) <span style="color: var(--danger);">*</span></label>
-              <div class="input-with-icon">
-                <span class="input-icon">🔒</span>
-                <input 
-                  type="password" 
-                  id="reg-password" 
-                  name="password" 
-                  class="form-control" 
-                  placeholder="Create a strong password" 
-                  required 
-                  minlength="6"
-                  oninput="handlePasswordInputValidation(this)"
-                />
-                <button type="button" class="password-toggle-btn" onclick="togglePasswordVisibility('reg-password', this)" title="Show/Hide Password">
-                  👁️
-                </button>
-              </div>
-              <div class="field-validation-msg" id="reg-password-err">
-                Password must be at least 6 characters long
-              </div>
-            </div>
-
-            <div class="form-group">
-              <label for="reg-location">Home City / Country</label>
-              <div class="input-with-icon">
-                <span class="input-icon">📍</span>
-                <input type="text" id="reg-location" name="location" class="form-control" placeholder="e.g. Mumbai, India or New York, USA" />
-              </div>
-            </div>
-
-            <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;">
-              Create Account
-            </button>
-          </form>
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <!-- ===================================================================
+    <!-- ===================================================================
        MODAL 1: LEAD A TRIP / ADD ITINERARY
        =================================================================== -->
-  <div class="modal-overlay" id="modal-new-trip">
-    <div class="modal-card">
-      <div class="modal-header">
-        <h3 class="modal-title">🚩 Host & Lead a Trip</h3>
-        <button class="modal-close" onclick="closeModals()">✕</button>
-      </div>
-      <form onsubmit="handleCreateTrip(event)">
-        <div class="form-group">
-          <label>Trip Title</label>
-          <input type="text" name="title" class="form-control" placeholder="e.g. Kasol & Kheerganga Trekking Camp" required />
+    <div class="modal-overlay" id="modal-new-trip">
+      <div class="modal-card">
+        <div class="modal-header">
+          <h3 class="modal-title">🚩 Host & Lead a Trip</h3>
+          <button class="modal-close" onclick="closeModals()">✕</button>
         </div>
-        <div class="form-group">
-          <label>Destination Location</label>
-          <input type="text" name="destination" class="form-control" placeholder="e.g. Parvati Valley, Himachal, India" required />
-        </div>
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+        <form onsubmit="handleCreateTrip(event)">
           <div class="form-group">
-            <label>Trip Style / Type</label>
-            <select name="type" class="form-control">
-              <option value="Mountains">Mountains</option>
-              <option value="Beaches">Beaches</option>
-              <option value="Heritage">Heritage</option>
-              <option value="International">International</option>
-            </select>
+            <label>Trip Title</label>
+            <input type="text" name="title" class="form-control" placeholder="e.g. Kasol & Kheerganga Trekking Camp"
+              required />
           </div>
           <div class="form-group">
-            <label>Departure & Return Dates</label>
-            <input type="text" name="dates" class="form-control" placeholder="e.g. Nov 10 - Nov 16, 2026" required />
-          </div>
-        </div>
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
-          <div class="form-group">
-            <label>Cost per Person (₹)</label>
-            <input type="number" name="price" class="form-control" placeholder="12500" required />
-          </div>
-          <div class="form-group">
-            <label>Max Travel Companions</label>
-            <input type="number" name="slots" class="form-control" value="5" min="1" max="25" required />
-          </div>
-        </div>
-        <div class="form-group">
-          <label>Host Name</label>
-          <input type="text" name="hostName" class="form-control" placeholder="Your Name" required />
-        </div>
-        <div class="form-group">
-          <label>Cover Photo Image URL</label>
-          <input type="url" name="image" class="form-control" placeholder="https://images.unsplash.com/..." />
-        </div>
-        <div class="form-group">
-          <label>Trip Highlights & Itinerary Description</label>
-          <textarea name="desc" class="form-control" rows="3" placeholder="Describe the daily plan, stay details, fitness level, and what makes this trip special..." required></textarea>
-        </div>
-        <div class="form-group">
-          <label>Tags (Comma-separated)</label>
-          <input type="text" name="tags" class="form-control" placeholder="Trekking, Campfire, Photography, StarGazing" value="Trekking, Campfire, Photography" />
-        </div>
-        <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;">
-          🚀 Publish Trip to Feed
-        </button>
-      </form>
-    </div>
-  </div>
-
-  <!-- ===================================================================
-       MODAL 2: JOIN TRIP & STRIPE CHECKOUT SIMULATOR
-       =================================================================== -->
-  <div class="modal-overlay" id="modal-booking">
-    <div class="modal-card">
-      <div class="modal-header">
-        <h3 class="modal-title">💳 Secure Stripe Booking</h3>
-        <button class="modal-close" onclick="closeModals()">✕</button>
-      </div>
-      <div>
-        <div style="background: var(--surface-alt); padding: 1.25rem; border-radius: var(--radius-md); margin-bottom: 1.5rem; border: 1px solid var(--card-border);">
-          <h4 id="book-trip-title" style="font-size: 1.2rem; margin-bottom: 0.25rem;"></h4>
-          <div id="book-trip-dest" style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 0.35rem;"></div>
-          <div id="book-trip-dates" style="font-size: 0.85rem; font-weight: 600; color: var(--primary);"></div>
-          <div style="margin-top: 0.75rem; font-size: 0.95rem;">
-            Cost: <strong id="book-trip-price"></strong>
-          </div>
-        </div>
-
-        <form onsubmit="handleConfirmPayment(event)">
-          <div class="form-group">
-            <label>Number of Seats</label>
-            <input type="number" id="book-seats" class="form-control" value="1" min="1" max="10" onchange="updateBookingTotal()" required />
-          </div>
-          <div class="form-group">
-            <label>Cardholder Name</label>
-            <input type="text" class="form-control" placeholder="e.g. Aditi Sharma" required />
-          </div>
-          <div class="form-group">
-            <label>Card Details (Stripe Test Simulator)</label>
-            <input type="text" class="form-control" placeholder="4242 •••• •••• 4242" value="4242 •••• •••• 4242" required />
+            <label>Destination Location</label>
+            <input type="text" name="destination" class="form-control"
+              placeholder="e.g. Parvati Valley, Himachal, India" required />
           </div>
           <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
             <div class="form-group">
-              <label>MM / YY</label>
-              <input type="text" class="form-control" placeholder="12/28" value="12/28" required />
+              <label>Trip Style / Type</label>
+              <select name="type" class="form-control">
+                <option value="Mountains">Mountains</option>
+                <option value="Beaches">Beaches</option>
+                <option value="Heritage">Heritage</option>
+                <option value="International">International</option>
+              </select>
             </div>
             <div class="form-group">
-              <label>CVC</label>
-              <input type="text" class="form-control" placeholder="123" value="123" required />
+              <label>Departure & Return Dates</label>
+              <input type="text" name="dates" class="form-control" placeholder="e.g. Nov 10 - Nov 16, 2026" required />
             </div>
           </div>
-          <div style="display: flex; justify-content: space-between; align-items: center; margin: 1.5rem 0; font-size: 1.2rem; font-weight: 800;">
-            <span>Total Payable:</span>
-            <span id="book-total-amt" style="color: var(--primary);">₹0</span>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+            <div class="form-group">
+              <label>Cost per Person (₹)</label>
+              <input type="number" name="price" class="form-control" placeholder="12500" required />
+            </div>
+            <div class="form-group">
+              <label>Max Travel Companions</label>
+              <input type="number" name="slots" class="form-control" value="5" min="1" max="25" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Host Name</label>
+            <input type="text" name="hostName" class="form-control" placeholder="Your Name" required />
+          </div>
+          <div class="form-group">
+            <label>Cover Photo Image URL</label>
+            <input type="url" name="image" class="form-control" placeholder="https://images.unsplash.com/..." />
+          </div>
+          <div class="form-group">
+            <label>Trip Highlights & Itinerary Description</label>
+            <textarea name="desc" class="form-control" rows="3"
+              placeholder="Describe the daily plan, stay details, fitness level, and what makes this trip special..."
+              required></textarea>
+          </div>
+          <div class="form-group">
+            <label>Tags (Comma-separated)</label>
+            <input type="text" name="tags" class="form-control"
+              placeholder="Trekking, Campfire, Photography, StarGazing" value="Trekking, Campfire, Photography" />
           </div>
           <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;">
-            🔒 Pay & Confirm Booking
+            🚀 Publish Trip to Feed
           </button>
         </form>
       </div>
     </div>
-  </div>
 
-  <!-- ===================================================================
+    <!-- ===================================================================
+       MODAL 2: JOIN TRIP & STRIPE CHECKOUT SIMULATOR
+       =================================================================== -->
+    <div class="modal-overlay" id="modal-booking">
+      <div class="modal-card">
+        <div class="modal-header">
+          <h3 class="modal-title">💳 Secure Stripe Booking</h3>
+          <button class="modal-close" onclick="closeModals()">✕</button>
+        </div>
+        <div>
+          <div
+            style="background: var(--surface-alt); padding: 1.25rem; border-radius: var(--radius-md); margin-bottom: 1.5rem; border: 1px solid var(--card-border);">
+            <h4 id="book-trip-title" style="font-size: 1.2rem; margin-bottom: 0.25rem;"></h4>
+            <div id="book-trip-dest" style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 0.35rem;">
+            </div>
+            <div id="book-trip-dates" style="font-size: 0.85rem; font-weight: 600; color: var(--primary);"></div>
+            <div style="margin-top: 0.75rem; font-size: 0.95rem;">
+              Cost: <strong id="book-trip-price"></strong>
+            </div>
+          </div>
+
+          <form onsubmit="handleConfirmPayment(event)">
+            <div class="form-group">
+              <label>Number of Seats</label>
+              <input type="number" id="book-seats" class="form-control" value="1" min="1" max="10"
+                onchange="updateBookingTotal()" required />
+            </div>
+            <div class="form-group">
+              <label>Cardholder Name</label>
+              <input type="text" class="form-control" placeholder="e.g. Aditi Sharma" required />
+            </div>
+            <div class="form-group">
+              <label>Card Details (Stripe Test Simulator)</label>
+              <input type="text" class="form-control" placeholder="4242 •••• •••• 4242" value="4242 •••• •••• 4242"
+                required />
+            </div>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+              <div class="form-group">
+                <label>MM / YY</label>
+                <input type="text" class="form-control" placeholder="12/28" value="12/28" required />
+              </div>
+              <div class="form-group">
+                <label>CVC</label>
+                <input type="text" class="form-control" placeholder="123" value="123" required />
+              </div>
+            </div>
+            <div
+              style="display: flex; justify-content: space-between; align-items: center; margin: 1.5rem 0; font-size: 1.2rem; font-weight: 800;">
+              <span>Total Payable:</span>
+              <span id="book-total-amt" style="color: var(--primary);">₹0</span>
+            </div>
+            <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;">
+              🔒 Pay & Confirm Booking
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===================================================================
        MODAL 3: SUBMIT PHOTO CONTEST
        =================================================================== -->
-  <div class="modal-overlay" id="modal-photo">
-    <div class="modal-card">
-      <div class="modal-header">
-        <h3 class="modal-title">📸 Submit Photo to Contest</h3>
-        <button class="modal-close" onclick="closeModals()">✕</button>
+    <div class="modal-overlay" id="modal-photo">
+      <div class="modal-card">
+        <div class="modal-header">
+          <h3 class="modal-title">📸 Submit Photo to Contest</h3>
+          <button class="modal-close" onclick="closeModals()">✕</button>
+        </div>
+        <form onsubmit="handleSubmitPhoto(event)">
+          <div class="form-group">
+            <label>Photo Title</label>
+            <input type="text" name="title" class="form-control" placeholder="e.g. Golden Hour at Nubra Dunes"
+              required />
+          </div>
+          <div class="form-group">
+            <label>Location Taken</label>
+            <input type="text" name="location" class="form-control" placeholder="e.g. Ladakh, India" required />
+          </div>
+          <div class="form-group">
+            <label>Photographer Name</label>
+            <input type="text" name="author" class="form-control" placeholder="Your Name" required />
+          </div>
+          <div class="form-group">
+            <label>Image URL</label>
+            <input type="url" name="image" class="form-control" placeholder="https://images.unsplash.com/..."
+              required />
+          </div>
+          <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;">
+            Submit Photo Entry
+          </button>
+        </form>
       </div>
-      <form onsubmit="handleSubmitPhoto(event)">
-        <div class="form-group">
-          <label>Photo Title</label>
-          <input type="text" name="title" class="form-control" placeholder="e.g. Golden Hour at Nubra Dunes" required />
+    </div>
+
+    <!-- ===================================================================
+       AI CHATBOT (BUDDYBOT)
+       =================================================================== -->
+    <div class="chatbot-bubble">
+      <button class="chatbot-trigger" id="chatbot-trigger" title="Chat with AI Travel Assistant">
+        💬
+      </button>
+    </div>
+
+    <div class="chatbot-panel" id="chatbot-panel">
+      <div class="chatbot-header">
+        <div style="display: flex; align-items: center; gap: 0.5rem;">
+          <span style="font-size: 1.3rem;">🤖</span>
+          <div>
+            <h4>WanderBot AI</h4>
+            <span style="font-size: 0.72rem; color: rgba(255,255,255,0.85);">WanderWay Copilot • Online</span>
+          </div>
         </div>
-        <div class="form-group">
-          <label>Location Taken</label>
-          <input type="text" name="location" class="form-control" placeholder="e.g. Ladakh, India" required />
+        <button id="chatbot-close"
+          style="background: none; border: none; color: #fff; font-size: 1.2rem; cursor: pointer;">✕</button>
+      </div>
+
+      <div class="chatbot-messages" id="chatbot-messages">
+        <div class="chat-bubble bot">
+          👋 Hey there adventurer! I'm WanderBot, your AI Travel Assistant on WanderWay. Ask me for custom itineraries,
+          solo travel advice, budget tips, or packing lists!
         </div>
-        <div class="form-group">
-          <label>Photographer Name</label>
-          <input type="text" name="author" class="form-control" placeholder="Your Name" required />
-        </div>
-        <div class="form-group">
-          <label>Image URL</label>
-          <input type="url" name="image" class="form-control" placeholder="https://images.unsplash.com/..." required />
-        </div>
-        <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;">
-          Submit Photo Entry
+      </div>
+
+      <!-- Quick Chips -->
+      <div class="chat-quick-chips">
+        <button class="chip-btn" onclick="sendQuickPrompt('Plan a 3-day Goa trip')">🌴 3-Day Goa</button>
+        <button class="chip-btn" onclick="sendQuickPrompt('Solo travel tips for beginners')">🧭 Solo Tips</button>
+        <button class="chip-btn" onclick="sendQuickPrompt('Packing checklist')">🎒 Packing List</button>
+        <button class="chip-btn" onclick="sendQuickPrompt('Travel safety tips')">🛡️ Safety Guide</button>
+      </div>
+
+      <form class="chatbot-input-wrap" id="chatbot-form">
+        <input type="text" class="chatbot-input" id="chatbot-input" placeholder="Ask travel advice..."
+          autocomplete="off" />
+        <button type="submit" class="btn btn-primary btn-sm" style="border-radius: var(--radius-full);">
+          ➤
         </button>
       </form>
     </div>
-  </div>
 
-  <!-- ===================================================================
-       AI CHATBOT (BUDDYBOT)
-       =================================================================== -->
-  <div class="chatbot-bubble">
-    <button class="chatbot-trigger" id="chatbot-trigger" title="Chat with AI Travel Assistant">
-      💬
-    </button>
-  </div>
-
-  <div class="chatbot-panel" id="chatbot-panel">
-    <div class="chatbot-header">
-      <div style="display: flex; align-items: center; gap: 0.5rem;">
-        <span style="font-size: 1.3rem;">🤖</span>
-        <div>
-          <h4>WanderBot AI</h4>
-          <span style="font-size: 0.72rem; color: rgba(255,255,255,0.85);">WanderWay Copilot • Online</span>
-        </div>
-      </div>
-      <button id="chatbot-close" style="background: none; border: none; color: #fff; font-size: 1.2rem; cursor: pointer;">✕</button>
-    </div>
-
-    <div class="chatbot-messages" id="chatbot-messages">
-      <div class="chat-bubble bot">
-        👋 Hey there adventurer! I'm WanderBot, your AI Travel Assistant on WanderWay. Ask me for custom itineraries, solo travel advice, budget tips, or packing lists!
-      </div>
-    </div>
-
-    <!-- Quick Chips -->
-    <div class="chat-quick-chips">
-      <button class="chip-btn" onclick="sendQuickPrompt('Plan a 3-day Goa trip')">🌴 3-Day Goa</button>
-      <button class="chip-btn" onclick="sendQuickPrompt('Solo travel tips for beginners')">🧭 Solo Tips</button>
-      <button class="chip-btn" onclick="sendQuickPrompt('Packing checklist')">🎒 Packing List</button>
-      <button class="chip-btn" onclick="sendQuickPrompt('Travel safety tips')">🛡️ Safety Guide</button>
-    </div>
-
-    <form class="chatbot-input-wrap" id="chatbot-form">
-      <input type="text" class="chatbot-input" id="chatbot-input" placeholder="Ask travel advice..." autocomplete="off" />
-      <button type="submit" class="btn btn-primary btn-sm" style="border-radius: var(--radius-full);">
-        ➤
-      </button>
-    </form>
-  </div>
-
-  <!-- ===================================================================
+    <!-- ===================================================================
        FOOTER
        =================================================================== -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-col">
-          <div class="logo-wrap" style="margin-bottom: 0.85rem;">
-            <div class="logo-icon">✈️</div>
-            <span>Wander<span class="highlight">Way</span></span>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-col">
+            <div class="logo-wrap" style="margin-bottom: 0.85rem;">
+              <div class="logo-icon">✈️</div>
+              <span>Wander<span class="highlight">Way</span></span>
+            </div>
+            <p style="color: var(--text-muted); font-size: 0.9rem; max-width: 320px; line-height: 1.5;">
+              Empowering solo travelers to wander together, share adventures, split costs, and discover authentic local
+              cultures safely.
+            </p>
           </div>
-          <p style="color: var(--text-muted); font-size: 0.9rem; max-width: 320px; line-height: 1.5;">
-            Empowering solo travelers to wander together, share adventures, split costs, and discover authentic local cultures safely.
-          </p>
+
+          <div class="footer-col">
+            <h5>Platform</h5>
+            <ul class="footer-links">
+              <li><a href="#trips" onclick="switchTab('trips')">Group Itineraries</a></li>
+              <li><a href="#meetup" onclick="switchTab('meetup')">Solo Travel Buddies</a></li>
+              <li><a href="#expenses" onclick="switchTab('expenses')">Expense Splitter</a></li>
+              <li><a href="#map" onclick="switchTab('map')">Destinations</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h5>Community & Safety</h5>
+            <ul class="footer-links">
+              <li><a href="#safety" onclick="switchTab('safety')">Safety Center & SOS</a></li>
+              <li><a href="#contest" onclick="switchTab('contest')">Photo Contest</a></li>
+              <li><a href="#bookings" onclick="switchTab('bookings')">Trip Vouchers</a></li>
+              <li><a href="javascript:void(0)" onclick="openNewTripModal()">Lead a Trip</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h5>Quick Voice Commands</h5>
+            <p style="font-size: 0.82rem; color: var(--text-muted); line-height: 1.6;">
+              Click the 🎙️ mic button in navbar and speak:<br>
+              • <em>"Show trips"</em><br>
+              • <em>"Find travel buddies"</em><br>
+              • <em>"Open expense tracker"</em><br>
+              • <em>"Dark mode"</em>
+            </p>
+          </div>
         </div>
 
-        <div class="footer-col">
-          <h5>Platform</h5>
-          <ul class="footer-links">
-            <li><a href="#trips" onclick="switchTab('trips')">Group Itineraries</a></li>
-            <li><a href="#meetup" onclick="switchTab('meetup')">Solo Travel Buddies</a></li>
-            <li><a href="#expenses" onclick="switchTab('expenses')">Expense Splitter</a></li>
-            <li><a href="#map" onclick="switchTab('map')">Destinations</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-col">
-          <h5>Community & Safety</h5>
-          <ul class="footer-links">
-            <li><a href="#safety" onclick="switchTab('safety')">Safety Center & SOS</a></li>
-            <li><a href="#contest" onclick="switchTab('contest')">Photo Contest</a></li>
-            <li><a href="#bookings" onclick="switchTab('bookings')">Trip Vouchers</a></li>
-            <li><a href="javascript:void(0)" onclick="openNewTripModal()">Lead a Trip</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-col">
-          <h5>Quick Voice Commands</h5>
-          <p style="font-size: 0.82rem; color: var(--text-muted); line-height: 1.6;">
-            Click the 🎙️ mic button in navbar and speak:<br>
-            • <em>"Show trips"</em><br>
-            • <em>"Find travel buddies"</em><br>
-            • <em>"Open expense tracker"</em><br>
-            • <em>"Dark mode"</em>
-          </p>
+        <div class="footer-bottom">
+          <div>© 2026 WanderWay. Lightweight, Fast & Dependency-Free.</div>
+          <div style="display: flex; gap: 1rem;">
+            <a href="javascript:void(0)">Privacy Policy</a>
+            <a href="javascript:void(0)">Terms of Service</a>
+            <a href="javascript:void(0)">Community Guidelines</a>
+          </div>
         </div>
       </div>
-
-      <div class="footer-bottom">
-        <div>© 2026 WanderWay. Lightweight, Fast & Dependency-Free.</div>
-        <div style="display: flex; gap: 1rem;">
-          <a href="javascript:void(0)">Privacy Policy</a>
-          <a href="javascript:void(0)">Terms of Service</a>
-          <a href="javascript:void(0)">Community Guidelines</a>
-        </div>
-      </div>
-    </div>
-  </footer>
+    </footer>
   </div> <!-- end #app-protected-wrapper -->
 
   <script src="app.js"></script>
 </body>
+
 </html>
